@@ -6,7 +6,7 @@ export const Theme = extendTheme({
       body: {
         fontFamily: "Roboto",
         fontWeight: "500",
-        backgroundColor: "#2e2e2e",
+        backgroundColor: "#111111",
         color: "#fff",
       },
       option: {
