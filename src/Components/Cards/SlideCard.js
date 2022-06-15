@@ -1,6 +1,7 @@
 import React from "react";
 import { Box, Text, Image } from "@chakra-ui/react";
 import "./style.css";
+import dayjs from "dayjs";
 
 const SlideCard = ({ category }) => {
   return (
@@ -23,7 +24,10 @@ const SlideCard = ({ category }) => {
               w="100%"
             />
             <Text fontSize="sm" fontWeight="400" mt={1}>
-              {data?.title}
+              {data?.title || data?.original_name}
+            </Text>
+            <Text fontSize="sm" fontWeight="400" mt={1} color="#FFFFFF4A">
+              {dayjs(data?.release_date).format('MMM D, YYYY')}
             </Text>
           </Box>
         ))}

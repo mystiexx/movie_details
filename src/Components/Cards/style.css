@@ -33,12 +33,12 @@
   
   .card-wrapper::-webkit-scrollbar-thumb {
     height: 5px;
-    background-color: #ecc94b;
+    background-color: #FF7600;
   }
   
   .card-wrapper::-webkit-scrollbar-thumb:hover {
     height: 3px;
-    background-color: #faf089;
+    background-color: #FF7600;
   }
   
   .card-wrapper::-webkit-scrollbar:vertical {
