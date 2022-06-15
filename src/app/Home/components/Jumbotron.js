@@ -33,5 +33,4 @@ const Jumbotron = ({ ...props }) => {
 
 export default Jumbotron;
 
-
 // linear-gradient(1.56deg, #000000 16.41%, rgba(0, 0, 0, 0.58) 134.27%);

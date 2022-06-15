@@ -18,7 +18,7 @@ const SearchBar = ({ placeholder, data }) => {
 
   const handleFilter = (e) => {
     let searchWord = e.target.value;
-    setWord(searchWord)
+    setWord(searchWord);
     let newFilter = data.filter((value) => {
       return value.title.toLowerCase().includes(searchWord.toLowerCase());
     });
@@ -29,9 +29,9 @@ const SearchBar = ({ placeholder, data }) => {
     }
   };
   const clearInput = () => {
-    setFilteredData([])
-    setWord("")
-  }
+    setFilteredData([]);
+    setWord("");
+  };
   return (
     <Box className="search">
       <Box

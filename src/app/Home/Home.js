@@ -72,7 +72,7 @@ const Home = ({ jumbo, latest, series, popular, trending }) => {
           marginTop={isNotSmallerScreen ? "300px" : "350px"}
         >
           <Container maxW="container.xl">
-          <Box h='100vh'>
+            <Box h="100vh">
               <Box display="flex" justifyContent="space-between" mb={4}>
                 <Text fontSize="2xl">Trending</Text>
               </Box>
@@ -82,7 +82,7 @@ const Home = ({ jumbo, latest, series, popular, trending }) => {
               </Box>
             </Box>
 
-            <Box h='100vh'>
+            <Box h="100vh">
               <Box display="flex" justifyContent="space-between" mb={4}>
                 <Text fontSize="2xl">Top Rated Movies</Text>
               </Box>
@@ -92,7 +92,7 @@ const Home = ({ jumbo, latest, series, popular, trending }) => {
               </Box>
             </Box>
 
-            <Box h='100vh'>
+            <Box h="100vh">
               <Box display="flex" justifyContent="space-between" mb={4}>
                 <Text fontSize="2xl">Popular Movies</Text>
               </Box>
@@ -102,7 +102,7 @@ const Home = ({ jumbo, latest, series, popular, trending }) => {
               </Box>
             </Box>
 
-            <Box h='100vh'>
+            <Box h="100vh">
               <Box display="flex" justifyContent="space-between" mb={4}>
                 <Text fontSize="2xl">Popular TV Series</Text>
               </Box>

@@ -10,16 +10,16 @@
   left: 33.5%;
 }
 
-.dataResult-mobile{
-    margin-top: 5px;
-    width: 70%;
-    height: 200px;
-    background-color: #fff;
-    overflow: hidden;
-    overflow-y: auto;
-    color: #000;
-    position: absolute;
-    left: 15%; 
+.dataResult-mobile {
+  margin-top: 5px;
+  width: 70%;
+  height: 200px;
+  background-color: #fff;
+  overflow: hidden;
+  overflow-y: auto;
+  color: #000;
+  position: absolute;
+  left: 15%;
 }
 
 .dataResult::-webkit-scrollbar {
