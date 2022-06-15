@@ -13,7 +13,6 @@ const SlideCard = ({ category }) => {
             className="mv-box"
             w="300px"
             _hover={{
-              
               cursor: "pointer",
             }}
           >
@@ -27,7 +26,7 @@ const SlideCard = ({ category }) => {
               {data?.title || data?.original_name}
             </Text>
             <Text fontSize="sm" fontWeight="400" mt={1} color="#FFFFFF4A">
-              {dayjs(data?.release_date).format('MMM D, YYYY')}
+              {dayjs(data?.release_date).format("MMM D, YYYY")}
             </Text>
           </Box>
         ))}

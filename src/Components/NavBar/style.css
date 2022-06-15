@@ -1,12 +1,12 @@
 .item {
-    margin-right: 20px;
-    font-size: 18px;
+  margin-right: 20px;
+  font-size: 18px;
 }
 
 .item:last-child {
-    margin-right: 0;
-  }
-  
+  margin-right: 0;
+}
+
 .active {
-    border-bottom: 3px solid #FF7600;
-  }
+  border-bottom: 3px solid #ff7600;
+}

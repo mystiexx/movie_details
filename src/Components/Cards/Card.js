@@ -11,13 +11,13 @@ const Card = ({ poster, name, date, rating }) => {
         objectFit="center"
         w="100%"
       />
-      <Text mt={2} fontSize="md" fontFamily='Joan'>
+      <Text mt={2} fontSize="md" fontFamily="Joan">
         {name}{" "}
       </Text>
       <Text mt={1} fontSize="sm" fontWeight="400" color="#FFFFFF4A">
         {date}{" "}
       </Text>
-      <Flex alignContent='center' alignItems='center'>
+      <Flex alignContent="center" alignItems="center">
         <ReactStars
           count={rating}
           value={rating}
@@ -25,7 +25,9 @@ const Card = ({ poster, name, date, rating }) => {
           edit="false"
           size={14}
         />
-        <Text color="#FF7600" ml={2}>{rating}</Text>
+        <Text color="#FF7600" ml={2}>
+          {rating}
+        </Text>
       </Flex>
     </Box>
   );
