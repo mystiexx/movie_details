@@ -3,10 +3,10 @@ import { Box, Text, Image, Flex } from "@chakra-ui/react";
 import ReactStars from "react-stars";
 import { Link } from "react-router-dom";
 
-const Card = ({ id, poster, name, date, rating }) => {
+const TvCard = ({ id, poster, name, date, rating }) => {
   return (
     <Box>
-      <Link to={`/movie/${name}/${id}`}>
+      <Link to={`/tv/${name}/${id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/original/${poster}`}
           alt={`https://image.tmdb.org/t/p/original/${poster}`}
@@ -37,4 +37,4 @@ const Card = ({ id, poster, name, date, rating }) => {
   );
 };
 
-export default Card;
+export default TvCard;

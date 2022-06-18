@@ -3,7 +3,7 @@ import { Box, Text, Image } from "@chakra-ui/react";
 import "./style.css";
 import dayjs from "dayjs";
 
-const SlideCard = ({ category }) => {
+const SlideTvCard = ({ category }) => {
   return (
     <Box>
       <div className="card-wrapper">
@@ -16,7 +16,7 @@ const SlideCard = ({ category }) => {
               cursor: "pointer",
             }}
           >
-            <a href={`/movie/${data.title}/${data.id}`}>
+            <a href={`/tv/${data.original_name}/${data.id}`}>
               <Image
                 src={`https://image.tmdb.org/t/p/original/${data.poster_path}`}
                 alt="movie-image"
@@ -24,7 +24,7 @@ const SlideCard = ({ category }) => {
                 w="100%"
               />
               <Text fontSize="sm" fontWeight="400" mt={1}>
-                {data?.title || data?.original_name}
+                {data?.original_name}
               </Text>
               <Text fontSize="sm" fontWeight="400" mt={1} color="#FFFFFF4A">
                 {dayjs(data?.release_date).format("MMM D, YYYY")}
@@ -37,4 +37,4 @@ const SlideCard = ({ category }) => {
   );
 };
 
-export default SlideCard;
+export default SlideTvCard;
