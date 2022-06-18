@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Grid, Text } from "@chakra-ui/react";
 import dayjs from "dayjs";
-import Card from "../../../Components/Cards/Card";
+import TvCard from "../../../Components/Cards/TvCard";
 import ReactPaginate from "react-paginate";
 import "./style.css";
 
-const Popular = ({
+const TabContent = ({
   isNotSmallerScreen,
   movies,
   tab_title,
@@ -23,11 +23,11 @@ const Popular = ({
         gap={6}
       >
         {movies?.map((data) => (
-          <Card
+          <TvCard
             key={data.id}
             id={data.id}
             poster={data.poster_path}
-            name={data.title || data.name}
+            name={data.name}
             rating={data.vote_average}
             date={dayjs(data.release_date).format("YYYY")}
           />
@@ -47,4 +47,4 @@ const Popular = ({
   );
 };
 
-export default Popular;
+export default TabContent;

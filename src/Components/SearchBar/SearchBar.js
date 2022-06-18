@@ -17,11 +17,13 @@ const SearchBar = ({ placeholder, data }) => {
   const [isNotSmallerScreen] = useMediaQuery("(min-width: 600px)");
 
   const handleFilter = (e) => {
-    let searchWord = e.target.value;
+    let searchWord = e.target.value.toLowerCase();
     setWord(searchWord);
-    let newFilter = data.filter((value) => {
-      return value.title.toLowerCase().includes(searchWord.toLowerCase());
-    });
+    let newFilter = data.filter(
+      (value) =>
+        value?.title?.toLowerCase().includes(searchWord) ||
+        value?.name?.toLowerCase().includes(searchWord)
+    );
     if (searchWord === "") {
       setFilteredData([]);
     } else {
@@ -69,7 +71,7 @@ const SearchBar = ({ placeholder, data }) => {
             return (
               <Box key={data.id} className="dataItem">
                 <Text ml={5} mt={2}>
-                  {data.title}
+                  {data.title || data.name}
                 </Text>
               </Box>
             );
