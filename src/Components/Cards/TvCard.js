@@ -3,16 +3,16 @@ import { Box, Text, Image, Flex } from "@chakra-ui/react";
 import ReactStars from "react-stars";
 import { Link } from "react-router-dom";
 
-const TvCard = ({ id, poster, name, date, rating }) => {
+const TvCard = ({ id, poster, name, date, rating, isNotSmallerScreen }) => {
   return (
     <Box>
-      <Link to={`/tv/${name}/${id}`}>
+      <Link to={`/tv/${name.replace(/([a-z])([A-Z])/, "$1 $2")}/${id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/original/${poster}`}
           alt={`https://image.tmdb.org/t/p/original/${poster}`}
-          objectFit="cover"
-          w="100%"
-          h="350px"
+          objectFit={isNotSmallerScreen ? "cover" : "center"}
+          w={isNotSmallerScreen ? "100%" : "auto"}
+          h={isNotSmallerScreen ? "350px" : null }
         />
         <Text mt={2} fontSize="md" fontFamily="Joan">
           {name}{" "}

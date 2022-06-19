@@ -16,7 +16,7 @@ const SlideTvCard = ({ category }) => {
               cursor: "pointer",
             }}
           >
-            <a href={`/tv/${data.original_name}/${data.id}`}>
+            <a href={`/tv/${data.original_name.replace(/([a-z])([A-Z])/, '$1 $2')}/${data.id}`}>
               <Image
                 src={`https://image.tmdb.org/t/p/original/${data.poster_path}`}
                 alt="movie-image"
@@ -24,7 +24,7 @@ const SlideTvCard = ({ category }) => {
                 w="100%"
               />
               <Text fontSize="sm" fontWeight="400" mt={1}>
-                {data?.original_name}
+                {data?.name}
               </Text>
               <Text fontSize="sm" fontWeight="400" mt={1} color="#FFFFFF4A">
                 {dayjs(data?.release_date).format("MMM D, YYYY")}

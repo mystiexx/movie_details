@@ -24,6 +24,8 @@ const Popular = ({
       >
         {movies?.map((data) => (
           <Card
+            category={"movie"}
+            isNotSmallerScreen={isNotSmallerScreen}
             key={data.id}
             id={data.id}
             poster={data.poster_path}

@@ -24,6 +24,7 @@ const TabContent = ({
       >
         {movies?.map((data) => (
           <TvCard
+          isNotSmallerScreen={isNotSmallerScreen}
             key={data.id}
             id={data.id}
             poster={data.poster_path}
